@@ -1,0 +1,12 @@
+{
+  "dialect": "mysql",
+  "hostname": "localhost",
+  "database": "brolikrecords",
+  "username": "brolikrecords",
+  "password": "Sealenmamco80@MAC",
+  "pool": {
+    "max": 5,
+    "min": 0,
+    "idle": 10000
+  }
+}
