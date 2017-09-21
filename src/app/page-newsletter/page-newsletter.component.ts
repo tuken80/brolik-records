@@ -20,7 +20,6 @@ export class PageNewsletterComponent implements OnInit {
   constructor(private newsletterService: NewsletterService, public snackBar: MdSnackBar) { }
 
   ngOnInit() {
-
   }
 
   submitFormulaireInscriptionNewsletter(emailInput) {

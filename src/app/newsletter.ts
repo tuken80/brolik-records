@@ -1,4 +1,4 @@
 export class Newsletter {
-  id: number;
+  id: string;
   email: string;
 }

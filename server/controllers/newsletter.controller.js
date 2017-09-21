@@ -6,8 +6,6 @@ module.exports = function(app, services, models, sequelize) {
   NewsletterControllers.InscriptionNewsletter = function(request, response, next) {
     var promesses = [];
 
-    console.log(request.body);
-
     promesses.push(services.newsletter.inscription(models, request.body));
 
     Promise.all(promesses).then(function(newsletter){
@@ -15,7 +13,7 @@ module.exports = function(app, services, models, sequelize) {
     }).catch(function(err) {
       console.log(err);
     });
-  }
+  };
 
   return NewsletterControllers;
 };

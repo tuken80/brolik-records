@@ -18,7 +18,7 @@ export class NewsletterService {
     return this.http
       .post('http://localhost:8081/newsletter/inscription', JSON.stringify({email: email}), {headers: this.headers})
       .toPromise()
-      .then(res => res.json().data as Newsletter)
+      .then(response => response.json().data as Newsletter)
       .catch(this.handleError);
   }
 

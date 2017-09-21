@@ -8,7 +8,7 @@ module.exports = function(app, services, models, sequelize) {
       title: "API REST server of brolikrecords.fr",
       text: "Please go out."
     });
-  }
+  };
 
   return IndexControllers;
 };

@@ -9,12 +9,13 @@
 var app = require('./core/app');
 var debug = require('debug')('brolikrecords:server');
 var http = require('http');
+var conf = require('./conf/server.json');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '8081');
+var port = normalizePort(process.env.PORT || conf['api-port']);
 app.set('port', port);
 
 /**
