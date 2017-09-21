@@ -4,9 +4,6 @@ import { NgModule } from '@angular/core';
 // Requetes
 import { HttpModule } from '@angular/http';
 
-// Router
-import { RouterModule, Routes } from '@angular/router';
-
 // Formulaires
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -18,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
-import { MdTooltipModule, MdInputModule, MdButtonModule } from '@angular/material';
+import { MdTooltipModule, MdInputModule, MdButtonModule, MdSnackBarModule } from '@angular/material';
 
 // Composants
 import { AppComponent } from './app.component';
@@ -58,6 +55,7 @@ import { PageActualiteesComponent } from './page-actualitees/page-actualitees.co
     MdTooltipModule,
     MdInputModule,
     MdButtonModule,
+    MdSnackBarModule,
     AppRoutingModule
   ],
   providers: [],
