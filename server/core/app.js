@@ -13,7 +13,7 @@ require('./logger')(app);
 require('./parsers')(app);
 require('./serve-static-files')(app);
 
-var models = require('./modele')(sequelize);
+var models = require('./model')(sequelize);
 var services = require('./services');
 var controllers = require('./controllers')(app, services, models, sequelize);
 
