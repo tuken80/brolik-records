@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class ReseauxSociauxComponent implements OnInit {
 
   positionTooltip = 'below';
-  nameReseau = 'Facebook';
 
   constructor() { }
 

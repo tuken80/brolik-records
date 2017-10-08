@@ -43,7 +43,4 @@ export class HeaderSecondaryComponent implements OnInit {
       }
     }
   }
-
-
-
 }
