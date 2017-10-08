@@ -1,0 +1,17 @@
+#footer {
+  background-color: white;
+}
+
+.linkReseauxSociaux {
+  color: #8BC34A;
+}
+
+mat-placeholder {
+  color: #9b9b9b;
+}
+
+#buttonBrolikRecords {
+  cursor: pointer;
+  background-color: white;
+  margin-right: 120px;
+}
