@@ -1,62 +1,80 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgClass } from '@angular/common';
 
-// Requetes
+import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
-
-// Formulaires
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// Routes
-import { AppRoutingModule } from './app-routing.module';
-
 // Angular-Material
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 
-import { MdTooltipModule, MdInputModule, MdButtonModule, MdSnackBarModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatFormFieldModule, MatTooltipModule, MatSnackBarModule } from '@angular/material';
 
-// Composants
+// Composant principal
 import { AppComponent } from './app.component';
 
-import { ReseauxSociauxComponent } from './reseaux-sociaux/reseaux-sociaux.component';
-import { PageIndexComponent } from './page-index/page-index.component';
-import { PageVideosComponent } from './page-videos/page-videos.component';
-import { PageEvenementsComponent } from './page-evenements/page-evenements.component';
-import { PageContactComponent } from './page-contact/page-contact.component';
-import { PageBoutiqueComponent } from './page-boutique/page-boutique.component';
-import { PageLicenseComponent } from './page-license/page-license.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { PageNewsletterComponent } from './page-newsletter/page-newsletter.component';
-import { PageActualiteesComponent } from './page-actualitees/page-actualitees.component';
+// Pages
+import { PageIndexComponent } from './components/pages/page-index/page-index.component';
+import { PageVideosComponent } from './components/pages/page-videos/page-videos.component';
+import { PageEvenementsComponent } from './components/pages/page-evenements/page-evenements.component';
+import { PageContactComponent } from './components/pages/page-contact/page-contact.component';
+import { PageBoutiqueComponent } from './components/pages/page-boutique/page-boutique.component';
+import { PageLicenseComponent } from './components/pages/page-license/page-license.component';
+import { PageNewsletterComponent } from './components/pages/page-newsletter/page-newsletter.component';
+import { PageActualiteesComponent } from './components/pages/page-actualitees/page-actualitees.component';
+
+// Composants secondaire
+import { HeaderSecondaryComponent } from './components/sections/header-secondary/header-secondary.component';
+import { ReseauxSociauxComponent } from './components/sections/reseaux-sociaux/reseaux-sociaux.component';
+import { WelcomeComponent } from './components/sections/welcome/welcome.component';
+
+// Routing
+const appRoutes: Routes = [
+  { path: '', redirectTo: '/index.html', pathMatch: 'full' },
+  { path: 'index.html', component: PageIndexComponent },
+  { path: 'musiques.html', component: PageVideosComponent },
+  { path: 'evenements.html', component: PageEvenementsComponent },
+  { path: 'actualitees.html', component: PageActualiteesComponent },
+  { path: 'boutique.html', component: PageBoutiqueComponent },
+  { path: 'newsletter.html', component: PageNewsletterComponent },
+  { path: 'contact.html', component: PageContactComponent },
+  { path: 'license.html', component: PageLicenseComponent },
+  { path: '**', redirectTo: '/index.html', pathMatch: 'prefix' }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReseauxSociauxComponent,
     PageIndexComponent,
     PageVideosComponent,
     PageEvenementsComponent,
     PageContactComponent,
     PageBoutiqueComponent,
     PageLicenseComponent,
-    PageNotFoundComponent,
     PageNewsletterComponent,
-    PageActualiteesComponent
+    PageActualiteesComponent,
+    HeaderSecondaryComponent,
+    ReseauxSociauxComponent,
+    WelcomeComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
     BrowserModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    NoopAnimationsModule,
-    MdTooltipModule,
-    MdInputModule,
-    MdButtonModule,
-    MdSnackBarModule,
-    AppRoutingModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

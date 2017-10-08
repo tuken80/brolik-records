@@ -1,0 +1,21 @@
+#headerIndex {
+  background-image: url(../../../../assets/images/logo.png);
+  background-size: 100% 100%;
+}
+
+.linkNews {
+  color: #8BC34A;
+}
+
+#imgCash {
+  margin-left: 50px;
+  margin-top: 200px;
+  height: 300px;
+  width: 250px;
+  border-radius: 50px;
+  border: 10px grey solid;
+}
+
+#left {
+  float: left;
+}

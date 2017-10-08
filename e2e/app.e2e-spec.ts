@@ -1,10 +1,10 @@
-import { BrolikrecordsPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('brolikrecords App', () => {
-  let page: BrolikrecordsPage;
+describe('brolik-records App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new BrolikrecordsPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {

@@ -1,2 +1,2 @@
-# brolikrecords
-Cash Brolik and Brolik Records official website.
+# brolik-records
+Brolik Records and Cash Brolik official website.

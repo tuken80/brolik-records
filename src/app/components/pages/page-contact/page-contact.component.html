@@ -1,0 +1,47 @@
+<app-header-secondary></app-header-secondary>
+<div class="mdl-grid" [ngClass]="['gridPageSecondaire']">
+  <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Formulaire de contact</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <p>Si vous souhaitez prendre contact, veuillez remplir le formulaire suivant.</p>
+      <div id="textAlignCenterBis">
+        <form action="contact.html#">
+          <mat-form-field class="fullWidthBis" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" matInput name="Sujet" [formControl]="sujetFormControl" [(ngModel)]="Sujet" required>
+            <mat-placeholder>
+              Sujet:
+            </mat-placeholder>
+            <mat-error *ngIf="sujetFormControl.hasError('required')">
+              Ce champ est obligatoire.
+            </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="fullWidthBis" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" matInput name="Email" type="email" [formControl]="emailFormControl" [(ngModel)]="Email" required>
+            <mat-placeholder>
+              Adresse email:
+            </mat-placeholder>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Ce champ est obligatoire.
+            </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="fullWidthBis" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <textarea class="mdl-textfield__input" matInput name="Message" type="text" rows="5" [formControl]="messageFormControl" [(ngModel)]="Message" required></textarea>
+            <mat-placeholder>
+              Message:
+            </mat-placeholder>
+            <mat-error *ngIf="messageFormControl.hasError('required')">
+              Ce champ est obligatoire.
+            </mat-error>
+          </mat-form-field>
+          <div id="itemsAlignCenterBis">
+            <button mat-raised-button type="submit">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

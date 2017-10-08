@@ -1,0 +1,27 @@
+<app-header-secondary></app-header-secondary>
+<div class="mdl-grid" [ngClass]="['gridPageSecondaire']">
+  <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Inscription à la newsletter</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <p>Si vous souhaitez recevoir les évenements et les actualitées de Cash Brolik merci d'indiquer votre adresse email dans le champ suivant.</p>
+      <div id="textAlignCenter">
+        <form #formulaireInscriptionNewsletter="ngForm" (ngSubmit)="submitFormulaireInscriptionNewsletter()">
+          <mat-form-field id="fullInputWidth">
+            <input #formulaireInscriptionNewsletterEmail class="mdl-textfield__input" matInput name="email" type="email" [formControl]="emailFormControl" [(ngModel)]="email" required>
+            <mat-placeholder>
+              Adresse email:
+            </mat-placeholder>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Ce champ est obligatoire.
+            </mat-error>
+          </mat-form-field>
+          <div id="itemsAlignCenter">
+            <button mat-raised-button type="submit">S'inscrire</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
