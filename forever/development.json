@@ -1,0 +1,28 @@
+[
+  {
+    "uid": "brolik-records-admin",
+    "append": true,
+    "watch": true,
+    "fifo": true,
+    "script": "index.js",
+    "sourceDir": "/Developer/Perso/brolik-records/back-office/admin",
+    "minUptime": 1000,
+    "spinSleepTime": 1000,
+    "LOGFILE": "/Developer/Perso/brolik-records/back-office/admin/logs/forever_admin_dev_log",
+    "OUTFILE": "/Developer/Perso/brolik-records/back-office/admin/logs/forever_admin_dev_out",
+    "ERRFILE": "/Developer/Perso/brolik-records/back-office/admin/logs/forever_admin_dev_err"
+  },
+  {
+    "uid": "brolik-records-api",
+    "append": true,
+    "watch": true,
+    "fifo": true,
+    "script": "index.js",
+    "sourceDir": "/Developer/Perso/brolik-records/api",
+    "minUptime": 1000,
+    "spinSleepTime": 1000,
+    "LOGFILE": "/Developer/Perso/brolik-records/back-office/api/logs/forever_api_dev_log",
+    "OUTFILE": "/Developer/Perso/brolik-records/back-office/api/logs/forever_api_dev_out",
+    "ERRFILE": "/Developer/Perso/brolik-records/back-office/api/logs/forever_api_dev_err"
+  }
+]

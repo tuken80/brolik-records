@@ -1,0 +1,45 @@
+<app-header-secondaire></app-header-secondaire>
+<div class="mdl-grid pageWidth">
+  <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Formulaire de contact</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <p>Si vous souhaitez prendre contact, veuillez remplir le formulaire suivant.</p>
+      <div class="fontCenter">
+        <form action="#">
+          <mat-form-field style="width: 100%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" matInput name="sujet" [formControl]="sujetFormControl" [(ngModel)]="sujet" required>
+            <mat-placeholder>
+              Sujet:
+            </mat-placeholder>
+            <mat-error *ngIf="sujetFormControl.hasError('required')">
+              Ce champ est obligatoire.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" matInput name="email" type="email" [formControl]="emailFormControl" [(ngModel)]="email" required>
+            <mat-placeholder>
+              Adresse email:
+            </mat-placeholder>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Ce champ est obligatoire.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%;" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <textarea class="mdl-textfield__input" matInput name="message" type="text" rows="5" [formControl]="messageFormControl" [(ngModel)]="message" required></textarea>
+            <mat-placeholder>
+              Message:
+            </mat-placeholder>
+            <mat-error *ngIf="messageFormControl.hasError('required')">
+              Ce champ est obligatoire.
+            </mat-error>
+          </mat-form-field>
+          <div class="itemsCenter">
+            <button mat-raised-button type="submit">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

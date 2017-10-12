@@ -1,0 +1,29 @@
+mat-placeholder {
+    color: #9b9b9b;
+}
+
+#buttonBrolikRecords {
+    cursor: pointer;
+    background-color: white;
+    margin-right: 120px;
+}
+
+.pageWidth {
+    width: 70%;
+}
+
+.fontGreen {
+    color: #8BC34A;
+}
+
+.fontCenter {
+    text-align: center;
+}
+
+.itemsCenter {
+    items-align: center;
+}
+
+mat-form-field input {
+    border-color: black;
+}

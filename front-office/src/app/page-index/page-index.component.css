@@ -1,0 +1,22 @@
+#headerPageIndex {
+  background-image: url(../../assets/images/logo.png);
+  background-size: 100% 100%;
+}
+
+#containerCadrePhoto {
+  float: left;
+}
+
+#imgCashBrolik {
+  margin-left: 50px;
+  margin-top: 200px;
+  height: 300px;
+  width: 250px;
+  border-radius: 50px;
+  border: 10px grey solid;
+}
+
+.fullSize {
+  width: 100%;
+  height: 100%;
+}
